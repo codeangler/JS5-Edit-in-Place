@@ -1,0 +1,33 @@
+
+.container {
+	margin: 0;
+	max-width: 960px;
+	margin: 15px auto;
+}
+
+.center-me {
+
+}
+
+img {
+	border-radius: 50%;
+	float: left;
+	margin-right: 50px;
+	width: 180px
+}
+
+p {
+	display: block;
+	font-family: Helvetica, Arial, sanserif;
+	font-weight: 500;
+	font-size: 1.6 rem;
+	line-height: 2.1 rem;
+	min-width: 180px;
+}
+
+section {
+
+	float: left;
+	position: relative;
+}
+
