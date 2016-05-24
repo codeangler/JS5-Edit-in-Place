@@ -27,6 +27,7 @@ function displayContent(j) {
 	y.setAttribute("type", "text");
 	y.setAttribute("id", "dataInput" + j);
 	y.innerHTML = "replaced";
+	// explaination http://stackoverflow.com/questions/843680/how-to-replace-dom-element-in-place-using-javascript
 	x.parentNode.replaceChild(y, x);
 
 }
