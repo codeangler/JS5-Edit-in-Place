@@ -10,10 +10,9 @@ for (var i = 0; i < nameData.length; i ++){
 	(function(i){
 		nameData[i].addEventListener("click", function(){displayContent(i)}, false);
 	})(i);
-	(function(i){
-		nameData[i].addEventListener("mouseleave", function(){blurrEvent(i)}, false);
-	})(i);
-		
+	// (function(i){
+	// 	nameData[i].addEventListener("mouseleave", function(){blurrEvent(i)}, false);
+	// })(i);
 }
 
 
@@ -22,8 +21,14 @@ for (var i = 0; i < nameData.length; i ++){
 // }
 
 function displayContent(j) {
-	x = j + 1;
-	document.getElementById("info"+ x).textContent = "You did it";
+	j++;
+	var x = document.getElementById("info" + j);
+	var y = document.createElement("input")
+	y.setAttribute("type", "text");
+	y.setAttribute("id", "dataInput" + j);
+	y.innerHTML = "replaced";
+	x.parentNode.replaceChild(y, x);
+
 }
 
 function blurrEvent(j) {
