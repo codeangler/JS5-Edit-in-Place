@@ -17,9 +17,9 @@ for (var i = 0; i < nameData.length; i ++){
 }
 
 function displayTextBox(j) {
-	j ++;
+	j++;
 	var x = document.getElementById("content" + j);
-	var y = document.createElement("input")
+	var y = document.createElement("input");
 		y.setAttribute("type", "text");
 		y.setAttribute("id", "dataInput" + j);
 		y.setAttribute("class", "textInput");
@@ -36,6 +36,17 @@ function displayTextBox(j) {
 }
 
 function blurEvent(j) {
-	var initialContent = document.getElementById("dataInput" + j).value;
-	initialContent.parentNode.replaceChild(initialContent, )
+	var y = document.getElementById("dataInput" + j);
+	var yValue = y.value;
+	var textNode = document.createTextNode(yValue);
+	console.log(yValue);
+	// Create new <p> element in the Node
+	var x = document.createElement("p");
+		content = "content" + j;
+		x.setAttribute("id", content);
+		x.setAttribute("class", "textInput");
+
+	// replace <input> with the new <p>
+	y.parentNode.replaceChild(x, y);
+	x.appendChild(y);
 }
