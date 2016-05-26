@@ -18,15 +18,9 @@ for (var i = 0; i < nameData.length; i ++){
 function displayTextBox(j) {
 	j++;
 	var x = document.getElementById("info" + j);
-	var y = document.createElement("input")
-		y.setAttribute("type", "text");
-		y.setAttribute("id", "dataInput" + j);
-		y.setAttribute("class", "textInput");
-		y.setAttribute("placeholder", x.innerHTML);
-		y.innerHTML = "replaced";
-	// explaination http://stackoverflow.com/questions/843680/how-to-replace-dom-element-in-place-using-javascript
-	// Replace node with #info + j  with newly created  y  
-	x.parentNode.replaceChild(y, x);
+	x.innerHTML = "<input></input>";
+
+	// 	x.innerHTML = "<input id=\"inputContent" + j + "\"" + " placeholder = " + x.innerHTML + "></input>"
 	
 }
 
