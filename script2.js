@@ -4,9 +4,6 @@ var nameData = document.querySelectorAll('.textInput');
 // Loop through all elements of class and assign addEventListener
 for (var i = 0; i < nameData.length; i ++){
 	// IFFE function passing  i
-	// (function(i){
-	// 	nameData[i].addEventListener("click", function(){alertText(i)}, false);
-	// })(i);
 	(function(i){
 		nameData[i].addEventListener("click", function(){displayTextBox(i)}, false);
 	})(i);
@@ -18,9 +15,11 @@ for (var i = 0; i < nameData.length; i ++){
 function displayTextBox(j) {
 	j++;
 	var x = document.getElementById("info" + j);
-	x.innerHTML = "<input></input>";
+	// x.removeEventListener("click", function(), false);
+	console.log(x.innerHTML);
+	x.innerHTML = "<input type=\"text\" value=\" " + x.innerHTML + "\"" + ">" + "</input>";
 
-	// 	x.innerHTML = "<input id=\"inputContent" + j + "\"" + " placeholder = " + x.innerHTML + "></input>"
+	//x.innerHTML = "<input id=\"inputContent" + j + "\"" + " placeholder = " + x.innerHTML + "></input>"
 	
 }
 
