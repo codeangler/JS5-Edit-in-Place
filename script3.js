@@ -5,21 +5,20 @@ var nameData = document.querySelectorAll('.textInput');
 for (var i = 0; i < nameData.length; i ++){
 	// IFFE function passing  i
 	(function(i){
-		nameData[i].addEventListener("click", function(){displayTextBox()}, false);
+		nameData[i].addEventListener("click", function(){displayTextBox(i)}, false);
 	})(i);
 	// (function(i){
 	// 	nameData[i].addEventListener("mouseleave", function(){blurEvent(i)}, false);
 	// })(i);
 }
 
-function displayTextBox() {
-	var x = document.querySelectorAll('.textInput');
-	for(var i = 0; i < x.length ; i++){
+function displayTextBox(j) {
 		// x.removeEventListener("click", function(), false);
-		console.log(x[i].innerHTML);
-		x[i].innerHTML = "<input value=\"" + x[i].textContent + "\"" + ">" + "</input>";
+		console.log(nameData[j].innerHTML);
+		nameData[j].createElement = "<input value=\"" + nameData[j].textContent + "\"" + ">" + "</input>";
 		//x.innerHTML = "<input id=\"inputContent" + j + "\"" + " placeholder = " + x.innerHTML + "></input>"
-		}
+		monkey = nameData[j].innerHTML;
+
 }
 
 // function blurEvent(j) {
