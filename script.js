@@ -14,6 +14,7 @@ for (var i = 0; i < nameData.length; i ++){
 	// (function(i){
 	// 	nameData[i].addEventListener("mouseleave", function(){blurEvent(i)}, false);
 	// })(i);
+	console.log("This is i " + i);
 }
 
 function displayTextBox(j) {
@@ -31,10 +32,11 @@ function displayTextBox(j) {
 	
 	// Add new event handler for mouseleave on input
 	document.getElementById("dataInput" + j).addEventListener("blur", function(){blurEvent(j)}, false);
-	
+	console.log("This is j @ displayText " + j);
 }
 
 function blurEvent(j) {
+	console.log("This is j @ blurEvent " + j);
 	var y = document.getElementById("dataInput" + j);
 	var yValue = y.value;
 	var textNode = document.createTextNode(yValue);
@@ -48,4 +50,5 @@ function blurEvent(j) {
 	// replace <input> with the new <p>
 	y.parentNode.replaceChild(x, y);
 	x.appendChild(y);
+	console.log( x + " x at blur event +  this is j " + j);
 }
